@@ -16,7 +16,8 @@ In this lab, we upload an audio file to Amazon S3, which triggers an AWS Lambda 
 - AWS Lambda
 - Amazon Transcribe
 - AWS IAM
-- Amazon CloudWatch
+
+![Architecture](https://github.com/AfroseH/AWS-AI/blob/main/architecture.png)
 
 ---
 
