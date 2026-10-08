@@ -25,7 +25,7 @@ In this lab, we upload an audio file to Amazon S3, which triggers an AWS Lambda 
 
 An Amazon S3 bucket named `automate-transcribe-job-lab05` was used to store the input audio file, the raw transcript JSON (`transcripts/`), and the clean text output (`clean-text/`).
 
-![S3 Bucket](S3.png)
+![S3 Bucket](https://github.com/AfroseH/AWS-AI/blob/main/S3.png)
 
 ---
 
@@ -33,7 +33,7 @@ An Amazon S3 bucket named `automate-transcribe-job-lab05` was used to store the 
 
 An IAM execution role was created and attached to the Lambda function that starts the transcription job.
 
-![Transcribe Role](transcribe-role.png)
+![Transcribe Role](https://github.com/AfroseH/AWS-AI/blob/main/transcribe-role.png)
 
 ---
 
@@ -106,7 +106,7 @@ def lambda_handler(event, context):
     }
 ```
 
-![Transcribe Function](transcribe-function.png)
+![Transcribe Function](https://github.com/AfroseH/AWS-AI/blob/main/transcribe-function.png)
 
 ---
 
@@ -116,7 +116,7 @@ An S3 trigger was added to the Lambda function so that uploading an audio file s
 
 The transcription job was created in Amazon Transcribe and completed successfully.
 
-![Transcription Job](transcriptionjob.png)
+![Transcription Job](https://github.com/AfroseH/AWS-AI/blob/main/transcriptionjob.png)
 
 ---
 
@@ -124,7 +124,7 @@ The transcription job was created in Amazon Transcribe and completed successfull
 
 Amazon Transcribe generated the transcript as a JSON file in the `transcripts/` folder. The JSON contains the full transcript along with metadata such as word-level timestamps and confidence scores.
 
-![Transcript Output](transcript-op.png)
+![Transcript Output](https://github.com/AfroseH/AWS-AI/blob/main/transcript-op.png)
 
 ---
 
@@ -137,7 +137,7 @@ A separate IAM execution role was created for the Lambda function that processes
 - Amazon S3 `GetObject` and `PutObject`
 - CloudWatch Logs
 
-![Clean Transcript Role](cleantranscribe-role.png)
+![Clean Transcript Role](https://github.com/AfroseH/AWS-AI/blob/main/cleantranscribe-role.png)
 
 ---
 
@@ -216,7 +216,7 @@ def lambda_handler(event, context):
     }
 ```
 
-![Clean Transcript Function](cleantranscript-function.png)
+![Clean Transcript Function](https://github.com/AfroseH/AWS-AI/blob/main/cleantranscript-function.png)
 
 ---
 
@@ -234,7 +234,7 @@ An S3 trigger was added to the second Lambda function.
 
 The clean transcript was stored in the `clean-text/` folder as a `.txt` file, which is much easier to read than the raw JSON.
 
-![Clean Text Output](cleantxt-op.png)
+![Clean Text Output](https://github.com/AfroseH/AWS-AI/blob/main/cleantxt-op.png)
 
 ---
 
@@ -242,7 +242,7 @@ The clean transcript was stored in the `clean-text/` folder as a `.txt` file, wh
 
 The final output shows the uploaded audio converted into readable text.
 
-![Final Output](final-op.png)
+![Final Output](https://github.com/AfroseH/AWS-AI/blob/main/final-op.png)
 
 ---
 
